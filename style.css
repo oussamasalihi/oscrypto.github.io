@@ -348,13 +348,14 @@ p {
   font-weight: 600;
   display: inline-block;
   margin-bottom: 15px;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--white);
+  border: 2px solid var(--white);
   border-radius: 30px;
   padding: 8px 30px;
 }
-.section-title-five h2 {
+.section-title-five h1 {
   margin-bottom: 15px;
+  color: var(--white);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-title-five h2 {
@@ -369,7 +370,7 @@ p {
   }
 }
 .section-title-five p {
-  color: var(--dark-3);
+  color: var(--gray-1);
 }
 
 .made-in-ayroui{
@@ -384,7 +385,6 @@ p {
 .made-in-ayroui:hover{
   transform: translateY(-5px);
 }
-
 
 /*===========================
   NAVBAR css 
@@ -524,6 +524,19 @@ p {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
+
+.navbar-area.navbar-nine .navbar .navbar-nav .nav-item .primary-btn {
+  margin-right: 12px;
+  background-color: var(--secondary);
+  color: var(--white);
+  border: 1px solid transparent;
+}
+.navbar-area.navbar-nine .navbar .navbar-nav .nav-item .primary-btn:hover {
+  background-color: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a i {
     position: relative;
@@ -936,9 +949,9 @@ p {
   border-radius: 0;
   position: relative;
   z-index: 1;
-  text-align: left;
+  text-align: right;
 }
-.header-eight .header-content h1 {
+.header-eight .header-content h2 {
   font-weight: 700;
   color: var(--secondary);
   text-shadow: 0px 3px 8px #00000017;
@@ -959,7 +972,7 @@ p {
 .header-eight .header-content h1 span {
   display: block;
 }
-.header-eight .header-content p {
+.header-eight .header-content h5 {
   margin-top: 30px;
   color: var(--white);
   opacity: 0.7;
@@ -969,14 +982,14 @@ p {
 }
 .header-eight .primary-btn {
   margin-right: 12px;
-  background-color: var(--white);
-  color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--white);
   border: 1px solid transparent;
 }
 .header-eight .primary-btn:hover {
   background-color: transparent;
-  color: var(--white);
-  border-color: var(--white);
+  color: var(--secondary);
+  border-color: var(--secondary);
 }
 .header-eight .video-button {
   display: inline-flex;
@@ -995,7 +1008,7 @@ p {
 }
 .header-eight .video-button .icon-btn {
   background: var(--white);
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 /*===========================
@@ -1153,6 +1166,7 @@ p {
 ===========================*/
 .services-eight {
   padding: 100px 0;
+  background-color: var(--primary);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .services-eight {
@@ -1165,18 +1179,19 @@ p {
   }
 }
 .services-eight .single-services {
-  padding: 40px 30px;
-  border: 1px solid var(--light-1);
-  border-radius: 10px;
+  padding: 20px 10px;
+  /* border:  solid var(--gray-3); */
+  border-radius: 8px;
   margin-bottom: 30px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+
 }
 .services-eight .single-services:hover {
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-1);
 }
 .services-eight .single-services:hover .service-icon {
   color: var(--white);
@@ -1187,24 +1202,11 @@ p {
   opacity: 1;
   visibility: visible;
 }
-.services-eight .single-services .service-icon {
-  width: 78px;
-  height: 78px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-  background: var(--white);
-  border: 2px solid var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 40px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  position: relative;
+.services-eight .single-services .service-icon img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+  border-radius: 10px;
 }
 .services-eight .single-services .service-icon::after {
   content: "";
@@ -1229,9 +1231,13 @@ p {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
+  text-align: center;
+  margin-top: 15px;
+  color: var(--secondary)
 }
 .services-eight .single-services .service-content p {
-  color: var(--dark-3);
+  color: var(--light-3);
+  text-align: center;
 }
 
 
@@ -1616,6 +1622,27 @@ p {
   color: var(--dark-3);
   pointer-events: none;
 }
+
+/* Collapse Css */
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: none;
+  background-color: transparent;
+}
+.accordion-button::after {
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  background-color: var(--secondary);
+  background-image: none !important;
+}
+.accordion-button.collapsed::after {
+  background-color: var(--error);
+}
+
 
 /*======================================
 	Contact CSS
